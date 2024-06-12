@@ -44,7 +44,10 @@ class Bridge(object):
 
         if model_type in ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"]:
             self.btype["chat"] = const.MOONSHOT
-
+            
+        if model_type in [const.OLLAMA_AI]:
+            self.btype["chat"] = const.OLLAMA_AI
+            
         if conf().get("use_linkai") and conf().get("linkai_api_key"):
             self.btype["chat"] = const.LINKAI
             if not conf().get("voice_to_text") or conf().get("voice_to_text") in ["openai"]:

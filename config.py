@@ -164,6 +164,9 @@ available_setting = {
     "linkai_api_key": "",
     "linkai_app_code": "",
     "linkai_api_base": "https://api.link-ai.tech",  # linkAI服务地址
+    # OLLAMA 平台配置
+    "ollama_ai_api_key": "",
+    "ollama_ai_api_base": "http://localhost:11434/v1",
 }
 
 
